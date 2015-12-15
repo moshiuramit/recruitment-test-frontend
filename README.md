@@ -10,9 +10,10 @@ The client must have the following components -
 * A header with notification icons
 * A chat interface
 * A login interface
+* A profile interface
 * A forgot password interface
 * A 404 page  
-You are at full liberty to think of other components/features.
+You are at full liberty to think of other components/features. You can take inspiration from popular chat clients.
 
 ### Technologies required
 * CoffeeScript (the code you write should be written entirely in CoffeeScript)
@@ -36,8 +37,9 @@ You should ideally complete the task in less than 24 work hours. In no circumsta
 Your individualized deadline will depend on the date you apply on. Usually it's within 7 days from your application.
 
 # Notes
-* Make sure to commit around every 5 to 15 minutes while you work. It is extremely important.
+* Make sure to commit around every 5 to 15 minutes while you work. It is extremely important. Make sure your commits messages make sense.
 * Sync your commits work every hour.
 * Read up references as much as you need. Reading is appreciated.
 * You may showcase your work on your portfolio regardless you work with us or not.
-
+* Your enthusiasm and creativity is evaluated on par with your professionalism.
+* Contact us if you have any trouble understanding the task.
