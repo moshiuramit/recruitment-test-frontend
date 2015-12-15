@@ -18,22 +18,26 @@ You are at full liberty to think of other components/features.
 * CoffeeScript (the code you write should be written entirely in CoffeeScript)
 * Polymer (you may use the polymer starter toolkit from https://developers.google.com/web/tools/polymer-starter-kit/)
 * Stylus (https://github.com/stylus/stylus)
-You are allowed to use any freely available resources/technologies excepts the ones expressly forbidden below)
+You are allowed to use any freely available (and permitted by copyright law) resources/technologies excepts the ones expressly forbidden below)
 
 ### Technologies NOT allowed
 * jQuery
 * bootstrap
 * any client side framework other than Polymer
-* 
 
 # How to do it?
 * Fork this repository to your personal github account.
 * Complete the task
 * Notify us by email.
-* 
 
 # Timelimit
 You should ideally complete the task in less than 24 work hours. In no circumstances it should take you more than 48 work hours.
 
 Your individualized deadline will depend on the date you apply on. Usually it's within 7 days from your application.
+
+# Notes
+* Make sure to commit around every 5 to 15 minutes while you work. It is extremely important.
+* Sync your commits work every hour.
+* Read up references as much as you need. Reading is appreciated.
+* You may showcase your work on your portfolio regardless you work with us or not.
 
