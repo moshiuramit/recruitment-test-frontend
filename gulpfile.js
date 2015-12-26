@@ -25,6 +25,9 @@ var packageJson = require('./package.json');
 var crypto = require('crypto');
 // var ghPages = require('gulp-gh-pages');
 
+var stylus = require('gulp-stylus');
+var coffee = require('gulp-coffee');
+
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
   'ie_mob >= 10',
@@ -97,6 +100,19 @@ var optimizeHtmlTask = function(src, dest) {
 };
 
 // Compile and automatically prefix stylesheets
+// Get Main .styl file and render
+gulp.task('stylus_main', function() {
+  gulp.src('app/styles/main.styl')
+    .pipe(stylus())
+    .pipe(gulp.dest('app/styles/'));
+});
+
+gulp.task('coffee', function() {
+  gulp.src('app/scripts/*.coffee')
+    .pipe(coffee({bare: true}))
+    .pipe(gulp.dest('app/scripts/'));
+});
+
 gulp.task('styles', function() {
   return styleTask('styles', ['**/*.css']);
 });
@@ -238,7 +254,7 @@ gulp.task('clean', function() {
 });
 
 // Watch files for changes & reload
-gulp.task('serve', ['lint', 'styles', 'elements', 'images'], function() {
+gulp.task('serve', ['lint', 'styles', 'elements', 'images', 'stylus_main','coffee'], function() {
   browserSync({
     port: 5000,
     notify: false,
@@ -266,6 +282,7 @@ gulp.task('serve', ['lint', 'styles', 'elements', 'images'], function() {
 
   gulp.watch(['app/**/*.html'], reload);
   gulp.watch(['app/styles/**/*.css'], ['styles', reload]);
+  gulp.watch(['app/styles/**/*.styl'], ['stylus_main', reload]);
   gulp.watch(['app/elements/**/*.css'], ['elements', reload]);
   gulp.watch(['app/{scripts,elements}/**/{*.js,*.html}'], ['lint']);
   gulp.watch(['app/images/**/*'], reload);
